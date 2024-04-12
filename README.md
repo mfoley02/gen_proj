@@ -1,9 +1,9 @@
-# gen711 project
+# GEN711 Project
 
-## BACKGROUND
+## Background
 
-## METHODS 
+## Methods 
 
-## CONCLUSIONS 
+## Conclusions  
 
 

@@ -1,9 +1,12 @@
+
 # GEN 711/811 Final Project
+=======
+# GEN711 Project
 
-## BACKGROUND
+## Background
 
-## METHODS 
+## Methods 
 
-## CONCLUSIONS 
+## Conclusions  
 
 

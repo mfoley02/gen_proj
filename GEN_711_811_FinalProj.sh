@@ -26,6 +26,10 @@ qiime cutadapt trim-paired \
     --verbose \
     --o-trimmed-sequences cutadapt_output/raw_reads_no_primers.qza
 
+cd cutadapt_output
+
+mkdir demux_summarize
+
 qiime demux summarize \
---i-data <path to the file from step above> \
---o-visualization  <path to an output directory>/<a name for the output files>.qzv 
+--i-data raw_reads_no_primers.qza \
+--o-visualization  demux_summarize/demux_summarize_output.qzv 

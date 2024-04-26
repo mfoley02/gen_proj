@@ -32,4 +32,27 @@ mkdir demux_summarize
 
 qiime demux summarize \
 --i-data raw_reads_no_primers.qza \
---o-visualization  demux_summarize/demux_summarize_output.qzv 
+--o-visualization  demux_summarize/demux_summarize_output.qzv
+
+mkdir denoise_output
+
+qiime dada2 denoise-paired \
+    --i-demultiplexed-seqs raw_reads_no_primers.qza  \
+    --p-trunc-len-f 0 \
+    --p-trunc-len-r 0 \
+    --p-trim-left-f 0 \
+    --p-trim-left-r 0 \
+    --p-n-threads 4 \
+    --o-denoising-stats denoise_output/denoising-stats.qza \
+    --o-table denoise_output/feature_table.qza \
+    --o-representative-sequences denoise_output/rep-seqs.qza
+
+mkdir -p denoise_output/output_visualization
+
+qiime metadata tabulate \
+    --m-input-file denoise_output/denoising-stats.qza \
+    --o-visualization denoise_output/output_visualization/denoising-stats.qzv
+
+qiime feature-table tabulate-seqs \
+        --i-data denoise_output/rep-seqs.qza \
+        --o-visualization denoise_output/output_visualization/rep-seqs.qzv

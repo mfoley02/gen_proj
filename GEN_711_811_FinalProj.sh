@@ -76,7 +76,7 @@ qiime feature-classifier classify-consensus-vsearch \
 ### Barplot 
 qiime taxa barplot \
      --i-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/feature_table.qza \
-     --i-taxonomy /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/taxonomy.qza/taxonomy.qza \
-     --o-visualization <new output path>/my-barplot.qzv
+     --i-taxonomy /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/taxonomy.qza \
+     --o-visualization /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/my-barplot.qzv
 
  

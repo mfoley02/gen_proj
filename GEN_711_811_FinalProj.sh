@@ -63,6 +63,8 @@ qiime feature-classifier classify-sklearn \
 --i-reads /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/rep-seqs.qza \
 --o-classification /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/classify_output.qza
 
+---------------------------------------------------------
+
 qiime feature-classifier classify-consensus-vsearch \
   --i-query /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/classify_output.qza \
   --i-reference-reads <refreads> \
@@ -78,5 +80,19 @@ qiime taxa barplot \
      --i-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/feature_table.qza \
      --i-taxonomy /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/taxonomy.qza \
      --o-visualization /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/my-barplot.qzv
+
+
+qiime feature-table filter-samples \
+  --i-table feature_table.qza \
+  --m-metadata-file /tmp/gen711_project_data/eDNA-fqs/cyano/cyano-metadata_salinity.tsv \
+  --o-filtered-table feature_table_filtered.qza
+
+qiime taxa barplot \
+     --i-table feature_table_filtered.qza \
+     --m-metadata-file /tmp/gen711_project_data/eDNA-fqs/cyano/cyano-metadata_salinity.tsv \
+     --i-taxonomy /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/taxonomy.qza \
+     --o-visualization filtered-barplot.qzv
+
+     
 
  

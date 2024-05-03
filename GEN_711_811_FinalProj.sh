@@ -61,10 +61,14 @@ mkdir classify_rep
 
 qiime feature-classifier classify-sklearn \
 --i-classifier /tmp/silva138_AB_V4_classifier.qza \
---i-reads classify_rep/rep-seqs.qza \
+--i-reads /home/users/mjd1127/gen_proj/classify_rep/rep-seqs.qza \
 --o-classification classify_rep/
 
 (links to qiime2 -- https://view.qiime2.org/visualization/?src=4cfefed5-918f-4e16-bf8a-83807e68a7bc and https://view.qiime2.org/visualization/?src=e9a28fcb-f8a1-445f-98a0-f2b5510de04f)
 
 silva138_AB_V4_classifier.qza
 
+qiime feature-classifier classify-sklearn \
+--i-classifier /tmp/silva138_AB_V4_classifier.qza \
+--i-reads /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/rep-seqs.qza \
+--o-classification /home/users/mjd1127/gen_proj/classify_rep_final/ 

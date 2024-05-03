@@ -62,4 +62,21 @@ qiime feature-classifier classify-sklearn \
 --i-classifier /tmp/silva138_AB_V4_classifier.qza \
 --i-reads /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/rep-seqs.qza \
 --o-classification /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/classify_output.qza
+
+qiime feature-classifier classify-consensus-vsearch \
+  --i-query /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/classify_output.qza \
+  --i-reference-reads <refreads> \
+  --i-reference-taxonomy  <reftax> \
+  --p-maxaccepts 10 \
+  --p-query-cov 0.80 \
+  --p-perc-identity 0.9 \
+  --p-threads 36 \
+  --o-classification /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/taxonomy.qza
+
+### Barplot 
+qiime taxa barplot \
+     --i-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/feature_table.qza \
+     --i-taxonomy /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/taxonomy.qza/taxonomy.qza \
+     --o-visualization <new output path>/my-barplot.qzv
+
  

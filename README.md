@@ -5,6 +5,14 @@
 
 ## Methods 
 
+### Downloading Data/Raw Reads
+
+### FASTQ Raw Reads QA/QC
+
+### Denoising
+
+### Taxonomy Assignment and Classification
+
 ## Conclusions  
 
 

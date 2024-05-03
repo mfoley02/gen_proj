@@ -56,3 +56,13 @@ qiime metadata tabulate \
 qiime feature-table tabulate-seqs \
         --i-data denoise_output/rep-seqs.qza \
         --o-visualization denoise_output/output_visualization/rep-seqs.qzv
+
+mkdir classify_rep 
+
+qiime feature-classifier classify-sklearn \
+--i-classifier /tmp/gen711_project_data/cyano/classifier_16S_V4-V5.qza \
+--i-reads classify_rep/rep-seqs.qza \
+--o-classification classify_rep/
+
+(links to qiime2 -- https://view.qiime2.org/visualization/?src=4cfefed5-918f-4e16-bf8a-83807e68a7bc and https://view.qiime2.org/visualization/?src=e9a28fcb-f8a1-445f-98a0-f2b5510de04f)
+

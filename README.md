@@ -39,7 +39,8 @@ A feature table was generated as a .qzv file to display these results regarding 
 
 ### Taxonomy Assignment and Classification
 
-#### Code
+#### feature-classifier classify-sklearn
+Used a provided classifier specific to the 16s coding region to assign taxonomic information (silva138_AB_V4_classifier.qza). 
 
 ## Conclusions  
 

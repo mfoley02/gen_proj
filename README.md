@@ -8,7 +8,7 @@ Final presentation **include link when done!
 
 [Code for the project](GEN_711_811_FinalProj.sh)
 
-Group Members: Amanda Bozzi, Michael Desisto, Michael Foley
+Group Members: Amanda Bozzi, Mike Desisto, Mike Foley
 
 ## Methods 
 

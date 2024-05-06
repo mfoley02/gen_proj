@@ -87,7 +87,7 @@ qiime taxa barplot \
      --i-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/feature_table.qza \
      --m-metadata-file /tmp/gen711_project_data/eDNA-fqs/cyano/cyano-metadata_salinity.tsv \
      --i-taxonomy /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/taxonomy.qza \
-     --o-visualization filtered-barplot.qzv
+     --o-visualization /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/filtered-barplot.qzv
 
 
  

@@ -72,27 +72,18 @@ qiime feature-classifier classify-sklearn \
 qiime feature-table summarize \
 --i-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/feature_table.qza \
 --o-visualization /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/feature_table.qzv
------------------------------------------------------------------------------------------------------
-
-### Barplot 
-qiime taxa barplot \
-     --i-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/feature_table.qza \
-     --i-taxonomy /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/taxonomy.qza \
-     --o-visualization /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/my-barplot.qzv
-
 
 qiime feature-table filter-samples \
   --i-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/feature_table.qza \
   --m-metadata-file /tmp/gen711_project_data/eDNA-fqs/cyano/cyano-metadata_salinity.tsv \
-  --o-filtered-table feature_table_filtered.qza
+  --o-filtered-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/feature_table_filtered.qza
 
 qiime taxa barplot \
-     --i-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/feature_table.qza \
+     --i-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/feature_table_filtered.qza \
      --m-metadata-file /tmp/gen711_project_data/eDNA-fqs/cyano/cyano-metadata_salinity.tsv \
      --i-taxonomy /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/taxonomy.qza \
      --o-visualization /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/filtered-barplot.qzv
 
--------------------------------------------------------------------------------------------------------
 #### Filtered phylogenetic tree
 qiime phylogeny align-to-tree-mafft-fasttree \
   --i-sequences /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/rep-seqs.qza \
@@ -102,23 +93,26 @@ qiime phylogeny align-to-tree-mafft-fasttree \
   --o-rooted-tree /home/users/mjd1127/gen_proj/cutadapt_output/tree/rooted-tree \
   --p-n-threads 4
 
+-------------------------------------------------------------------------------------------------------
+mkdir tree
+
 ## same metadata as barplot steps
 qiime diversity core-metrics-phylogenetic \
   --i-phylogeny /home/users/mjd1127/gen_proj/cutadapt_output/tree/rooted-tree.qza \
   --i-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/feature_table.qza \
   --p-sampling-depth 500 \
   --m-metadata-file /tmp/gen711_project_data/eDNA-fqs/cyano/cyano-metadata_salinity.tsv  \ 
-  --p-n-jobs-or-threads ????
-  --output-dir /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics
+  --p-n-jobs-or-threads 
+  --output-dir /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics (maybe need to make directory)
 
 qiime diversity alpha-phylogenetic \
-  --i-table .../feature_table_filtered.qza \
+  --i-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/feature_table_filtered.qza \
   --i-phylogeny /home/users/mjd1127/gen_proj/cutadapt_output/tree/rooted-tree.qza \
-  --p-metric faith_pd \ ????
+  --p-metric faith_pd \ 
   --o-alpha-diversity /home/users/mjd1127/gen_proj/cutadapt_output/tree/core-metrics/faith_pd
 
 qiime diversity alpha-rarefaction \
-    --i-table .../feature_table_filtered.qza \
+    --i-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/feature_table_filtered.qza \
     --i-phylogeny /home/users/mjd1127/gen_proj/cutadapt_output/tree/rooted-tree.qza \
     --p-max-depth 150000 \
     --m-metadata-file /tmp/gen711_project_data/eDNA-fqs/cyano/cyano-metadata_salinity.tsv \
@@ -128,7 +122,7 @@ qiime diversity alpha-rarefaction \
 
 qiime diversity alpha-group-significance \
     --i-alpha-diversity /home/users/mjd1127/gen_proj/cutadapt_output/tree/core-metrics/faith_pd.qza \
-    --m-metadata-file <metadata file>  \ ?????
+    --m-metadata-file /tmp/gen711_project_data/eDNA-fqs/cyano/cyano-metadata_salinity.tsv \
     --o-visualization /home/users/mjd1127/gen_proj/cutadapt_output/tree/core-metrics/alpha-group-significance
 
  

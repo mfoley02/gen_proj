@@ -84,6 +84,8 @@ qiime taxa barplot \
      --i-taxonomy /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/taxonomy.qza \
      --o-visualization /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/filtered-barplot.qzv
 
+mkdir tree
+
 #### Filtered phylogenetic tree
 qiime phylogeny align-to-tree-mafft-fasttree \
   --i-sequences /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/rep-seqs.qza \
@@ -93,17 +95,14 @@ qiime phylogeny align-to-tree-mafft-fasttree \
   --o-rooted-tree /home/users/mjd1127/gen_proj/cutadapt_output/tree/rooted-tree \
   --p-n-threads 4
 
--------------------------------------------------------------------------------------------------------
-mkdir tree
-
-## same metadata as barplot steps
 qiime diversity core-metrics-phylogenetic \
-  --i-phylogeny /home/users/mjd1127/gen_proj/cutadapt_output/tree/rooted-tree.qza \
-  --i-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/feature_table.qza \
-  --p-sampling-depth 500 \
-  --m-metadata-file /tmp/gen711_project_data/eDNA-fqs/cyano/cyano-metadata_salinity.tsv  \ 
-  --p-n-jobs-or-threads 
-  --output-dir /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics (maybe need to make directory)
+--i-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/feature_table_filtered.qza \
+--i-phylogeny /home/users/mjd1127/gen_proj/cutadapt_output/tree/rooted-tree.qza \
+--p-sampling-depth 500 \
+--m-metadata-file /tmp/gen711_project_data/eDNA-fqs/cyano/cyano-metadata_salinity.tsv  \
+--output-dir /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics
+
+-------------------------------------------------------------------------------------------------------
 
 qiime diversity alpha-phylogenetic \
   --i-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/feature_table_filtered.qza \

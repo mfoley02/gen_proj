@@ -63,13 +63,13 @@ qiime feature-classifier classify-sklearn \
 --i-reads /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/rep-seqs.qza \
 --o-classification /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/classify_output.qza
 
----------------------------------------------------------
 
 qiime feature-classifier classify-sklearn \
   --i-classifier /tmp/gen711_project_data/eDNA-fqs/cyano/ref-database/classifier_16S_V4-V5.qza \
   --i-reads /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/rep-seqs.qza \
   --o-classification /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/taxonomy.qza
 
+-----------------------------------------------------------------------------------------------------
 
 ### Barplot 
 qiime taxa barplot \

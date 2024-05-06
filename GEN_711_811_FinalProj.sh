@@ -89,5 +89,43 @@ qiime taxa barplot \
      --i-taxonomy /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/taxonomy.qza \
      --o-visualization /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/filtered-barplot.qzv
 
+-------------------------------------------------------------------------------------------------------
+#### Filtered phylogenetic tree
+qiime phylogeny align-to-tree-mafft-fasttree \
+  --i-sequences /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/rep-seqs.qza \
+  --o-alignment /home/users/mjd1127/gen_proj/cutadapt_output/tree/alignments \
+  --o-masked-alignment /home/users/mjd1127/gen_proj/cutadapt_output/tree/masked-alignment \
+  --o-tree /home/users/mjd1127/gen_proj/cutadapt_output/tree/unrooted-tree \
+  --o-rooted-tree /home/users/mjd1127/gen_proj/cutadapt_output/tree/rooted-tree \
+  --p-n-threads 4
+
+## same metadata as barplot steps
+qiime diversity core-metrics-phylogenetic \
+  --i-phylogeny /home/users/mjd1127/gen_proj/cutadapt_output/tree/rooted-tree.qza \
+  --i-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/feature_table.qza \
+  --p-sampling-depth 500 \
+  --m-metadata-file metadata.tsv  \ ????
+  --p-n-jobs-or-threads ????
+  --output-dir /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics
+
+qiime diversity alpha-phylogenetic \
+  --i-table .../feature_table_filtered.qza \
+  --i-phylogeny /home/users/mjd1127/gen_proj/cutadapt_output/tree/rooted-tree.qza \
+  --p-metric faith_pd \ ????
+  --o-alpha-diversity /home/users/mjd1127/gen_proj/cutadapt_output/tree/core-metrics/faith_pd
+
+qiime diversity alpha-rarefaction \
+    --i-table .../feature_table_filtered.qza \
+    --i-phylogeny /home/users/mjd1127/gen_proj/cutadapt_output/tree/rooted-tree.qza \
+    --p-max-depth 150000 \
+    --m-metadata-file <metadata file>  \ ?????
+    --p-min-depth 100 \
+    --p-steps 15 \
+    --o-visualization /home/users/mjd1127/gen_proj/cutadapt_output/tree/core-metrics/alpha-rarefaction (maybe need to make directory)
+
+qiime diversity alpha-group-significance \
+    --i-alpha-diversity /home/users/mjd1127/gen_proj/cutadapt_output/tree/core-metrics/faith_pd.qza \
+    --m-metadata-file <metadata file>  \ ?????
+    --o-visualization /home/users/mjd1127/gen_proj/cutadapt_output/tree/core-metrics/alpha-group-significance
 
  

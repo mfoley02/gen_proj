@@ -69,6 +69,9 @@ qiime feature-classifier classify-sklearn \
   --i-reads /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/rep-seqs.qza \
   --o-classification /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/taxonomy.qza
 
+qiime feature-table summarize \
+--i-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/feature_table.qza \
+--o-visualization /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/feature_table.qzv
 -----------------------------------------------------------------------------------------------------
 
 ### Barplot 
@@ -104,7 +107,7 @@ qiime diversity core-metrics-phylogenetic \
   --i-phylogeny /home/users/mjd1127/gen_proj/cutadapt_output/tree/rooted-tree.qza \
   --i-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/feature_table.qza \
   --p-sampling-depth 500 \
-  --m-metadata-file metadata.tsv  \ ????
+  --m-metadata-file /tmp/gen711_project_data/eDNA-fqs/cyano/cyano-metadata_salinity.tsv  \ 
   --p-n-jobs-or-threads ????
   --output-dir /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics
 
@@ -118,7 +121,7 @@ qiime diversity alpha-rarefaction \
     --i-table .../feature_table_filtered.qza \
     --i-phylogeny /home/users/mjd1127/gen_proj/cutadapt_output/tree/rooted-tree.qza \
     --p-max-depth 150000 \
-    --m-metadata-file <metadata file>  \ ?????
+    --m-metadata-file /tmp/gen711_project_data/eDNA-fqs/cyano/cyano-metadata_salinity.tsv \
     --p-min-depth 100 \
     --p-steps 15 \
     --o-visualization /home/users/mjd1127/gen_proj/cutadapt_output/tree/core-metrics/alpha-rarefaction (maybe need to make directory)

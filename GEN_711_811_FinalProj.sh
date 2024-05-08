@@ -102,26 +102,33 @@ qiime diversity core-metrics-phylogenetic \
 --m-metadata-file /tmp/gen711_project_data/eDNA-fqs/cyano/cyano-metadata_salinity.tsv  \
 --output-dir /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics
 
+
+qiime feature-table relative-frequency \
+  --i-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics/rarefied_table.qza \
+  --o-relative-frequency-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics/relative_rarefied_table
+
+qiime diversity pcoa-biplot \
+  --i-features /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics/relative_rarefied_table.qza \
+  --i-pcoa /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics/unweighted_unifrac_pcoa_results.qza \
+  --o-biplot /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics/unweighted_unifrac_pcoa_biplot
+
+qiime emperor biplot \
+  --i-biplot /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics/unweighted_unifrac_pcoa_biplot.qza \
+  --m-sample-metadata-file /tmp/gen711_project_data/eDNA-fqs/cyano/cyano-metadata_salinity.tsv \
+  --o-visualization /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics/unweighted_unifrac_pcoa_emperor_biplot
+
 -------------------------------------------------------------------------------------------------------
 
-qiime diversity alpha-phylogenetic \
-  --i-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/feature_table_filtered.qza \
-  --i-phylogeny /home/users/mjd1127/gen_proj/cutadapt_output/tree/rooted-tree.qza \
-  --p-metric faith_pd \ 
-  --o-alpha-diversity /home/users/mjd1127/gen_proj/cutadapt_output/tree/core-metrics/faith_pd
-
-qiime diversity alpha-rarefaction \
-    --i-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/feature_table_filtered.qza \
-    --i-phylogeny /home/users/mjd1127/gen_proj/cutadapt_output/tree/rooted-tree.qza \
-    --p-max-depth 150000 \
-    --m-metadata-file /tmp/gen711_project_data/eDNA-fqs/cyano/cyano-metadata_salinity.tsv \
-    --p-min-depth 100 \
-    --p-steps 15 \
-    --o-visualization /home/users/mjd1127/gen_proj/cutadapt_output/tree/core-metrics/alpha-rarefaction (maybe need to make directory)
-
 qiime diversity alpha-group-significance \
-    --i-alpha-diversity /home/users/mjd1127/gen_proj/cutadapt_output/tree/core-metrics/faith_pd.qza \
-    --m-metadata-file /tmp/gen711_project_data/eDNA-fqs/cyano/cyano-metadata_salinity.tsv \
-    --o-visualization /home/users/mjd1127/gen_proj/cutadapt_output/tree/core-metrics/alpha-group-significance
+  --i-alpha-diversity /home/users/mjd1127/gen_proj/cutadapt_output/tree/core-metrics/shannon_vector.qza \
+  --m-metadata-file /tmp/gen711_project_data/eDNA-fqs/cyano/cyano-metadata_salinity.tsv \
+  --o-visualization /home/users/mjd1127/gen_proj/cutadapt_output/tree/core-metrics/alpha-group-significance
+
+qiime diversity beta-group-significance \
+  --i-distance-matrix /home/users/mjd1127/gen_proj/cutadapt_output/tree/core-metrics/unweighted_unifrac_distance_matrix.qza \
+  --m-metadata-file /tmp/gen711_project_data/eDNA-fqs/cyano/cyano-metadata_salinity.tsv \
+  --m-metadata-column <column_in_metadata_that_groups_replicates>  \
+  --p-pairwise \
+  --o-visualization core-metrics/unweighted_unifrac-beta-group-significance
 
  

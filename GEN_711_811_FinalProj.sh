@@ -116,18 +116,18 @@ qiime emperor biplot \
   --m-sample-metadata-file /tmp/gen711_project_data/eDNA-fqs/cyano/cyano-metadata_salinity.tsv \
   --o-visualization /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics/unweighted_unifrac_pcoa_emperor_biplot
 
--------------------------------------------------------------------------------------------------------
+mkdir diversity_sig_plots
 
 qiime diversity alpha-group-significance \
-  --i-alpha-diversity /home/users/mjd1127/gen_proj/cutadapt_output/tree/core-metrics/shannon_vector.qza \
+  --i-alpha-diversity /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics/shannon_vector.qza \
   --m-metadata-file /tmp/gen711_project_data/eDNA-fqs/cyano/cyano-metadata_salinity.tsv \
-  --o-visualization /home/users/mjd1127/gen_proj/cutadapt_output/tree/core-metrics/alpha-group-significance
+  --o-visualization /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics/diversity_sig_plots/alpha-group-significance
 
 qiime diversity beta-group-significance \
-  --i-distance-matrix /home/users/mjd1127/gen_proj/cutadapt_output/tree/core-metrics/unweighted_unifrac_distance_matrix.qza \
+  --i-distance-matrix /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics/unweighted_unifrac_distance_matrix.qza \
   --m-metadata-file /tmp/gen711_project_data/eDNA-fqs/cyano/cyano-metadata_salinity.tsv \
-  --m-metadata-column <column_in_metadata_that_groups_replicates>  \
+  --m-metadata-column Replicate \
   --p-pairwise \
-  --o-visualization core-metrics/unweighted_unifrac-beta-group-significance
+  --o-visualization /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics/diversity_sig_plots/unweighted_unifrac-beta-group-significance
 
  

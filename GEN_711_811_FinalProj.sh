@@ -102,7 +102,6 @@ qiime diversity core-metrics-phylogenetic \
 --m-metadata-file /tmp/gen711_project_data/eDNA-fqs/cyano/cyano-metadata_salinity.tsv  \
 --output-dir /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics
 
-
 qiime feature-table relative-frequency \
   --i-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics/rarefied_table.qza \
   --o-relative-frequency-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics/relative_rarefied_table

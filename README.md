@@ -60,16 +60,16 @@ Used the filtered feature data to generate a barplot as a means of visualizing t
 Generated a rooted phylogenetic tree as a .qza file from aligned sequences using MAFFT for alignment and FastTree for tree inference. 
 
 #### diversity core-metrics-phylogenetic
-Used the filtered feature data, rooted phylogenetic tree, and metadata to compute diversity metrics and generate diversity analyses. Used the Emperor tool to visualize data (including Bray Curtis dissimilarity, Jaccard dissimilarity, and weighted/unweighted UniFrac). 
+Used the filtered feature data, rooted phylogenetic tree, and metadata to compute diversity metrics and generate diversity analyses. The Emperor tool was used to visualize data as PCoA plots (including Bray Curtis dissimilarity, Jaccard dissimilarity, and weighted/unweighted UniFrac). 
 
 #### feature-table relative-frequency
-explain
+Generated a feature table containing relative abundance values based on calculations regarding the relative frequencies of features within each sample using raw abundance data. 
 
 #### diversity pcoa-biplot
-explain
+Generated a PCoA biplot of Unweighted UniFrac data (similarity metric). 
 
 #### emperor biplot
-explain
+Visualized the PCoA biplot using the Emperor visualization tool. (Fig. ??)
 
 #### diversity alpha-group-significance
 explain

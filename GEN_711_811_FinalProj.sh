@@ -90,6 +90,27 @@ qiime phylogeny align-to-tree-mafft-fasttree \
   --o-rooted-tree /home/users/mjd1127/gen_proj/cutadapt_output/tree/rooted-tree \
   --p-n-threads 4
 
+------------------------------------------
+#### Visualizing phylogenetic tree
+
+conda activate /tmp/qiime2-working-again
+
+#adds taxonomic data to tree
+qiime empress tree-plot \
+   --i-tree /home/users/mjd1127/gen_proj/cutadapt_output/tree/rooted-tree.qza \
+   --m-feature-metadata-file /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/taxonomy.qza \
+   --o-visualization /home/users/mjd1127/gen_proj/cutadapt_output/tree/empress-tree-tax.qzv
+
+#adds metadata and taxonomic data to tree
+qiime empress community-plot \
+   --i-tree /home/users/mjd1127/gen_proj/cutadapt_output/tree/rooted-tree.qza \
+   --i-feature-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/feature_table_filtered.qza \
+   --m-sample-metadata-file /tmp/gen711_project_data/eDNA-fqs/cyano/cyano-metadata_salinity.tsv \
+   --m-feature-metadata-file /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/taxonomy.qza \
+   --o-visualization /home/users/mjd1127/gen_proj/cutadapt_output/tree/empress-tree-tax-table.qzv
+
+------------------------------------------
+
 qiime diversity core-metrics-phylogenetic \
 --i-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/feature_table_filtered.qza \
 --i-phylogeny /home/users/mjd1127/gen_proj/cutadapt_output/tree/rooted-tree.qza \

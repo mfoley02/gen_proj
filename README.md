@@ -27,7 +27,7 @@ The FASTQ files provided in the cyano dataset were then imported into a single Q
 The primer and adapters of each pair of sequences were removed. Primer sequences specific to the cyano dataset were provided and specified in this command. 
 
 #### demux summarize
-Provided information summarizing demultiplexed sequence data; this included sequence counts (whole dataset and per sample), frequency histograms, and quality plots. 
+Provided information summarizing demultiplexed sequence data; this included sequence counts (whole dataset and per sample), frequency histograms, and quality plots. (Fig. 1)
 
 ### Denoising
 
@@ -46,21 +46,21 @@ A feature table was generated as a .qzv file to display these results regarding 
 Used a provided classifier specific to the 16s coding region to assign taxonomic information (silva138_AB_V4_classifier.qza). 
 
 #### feature-table summarize
-Converted the generated feature table from .qza to .qzv file format so that it could be visualized using QIIME2.
+Converted the generated feature table from .qza to .qzv file format so that it could be visualized using QIIME2. The output .qzv file displayed barplots summarizing data regarding the frequency per sample and frequency per feature. (Fig. 2)
 
 #### feature-table filter-samples
 Generated a filtered feature table using the initial feature table and metadata as input data. 
 
 #### taxa barplot
-Generated barplot as a means of visualizing taxonomy. Verified that sample identity was 100% bacteria.
+Used the filtered feature data to generate a barplot as a means of visualizing taxonomy. Verified that sample identity was 100% bacteria.
 
 ### Diversity Analysis and Phylogenetic Placement of ASVs
 
 #### phylogeny align-to-tree-mafft-fasttree
-explain
+Generated a rooted phylogenetic tree as a .qza file from aligned sequences using MAFFT for alignment and FastTree for tree inference. 
 
 #### diversity core-metrics-phylogenetic
-explain 
+Used the filtered feature data, rooted phylogenetic tree, and metadata to compute diversity metrics and generate diversity analyses. Used the Emperor tool to visualize data (including Bray Curtis dissimilarity, Jaccard dissimilarity, and weighted/unweighted UniFrac). 
 
 #### feature-table relative-frequency
 explain

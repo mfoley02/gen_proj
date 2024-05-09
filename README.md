@@ -2,7 +2,7 @@
 # GEN 711/811 Final Project
 
 ## Background
-The dataset we used came from a study that sequenced eDNA for cyanobacteria from water samples in various locations around Martha’s Vineyard. In the data set, samples are classified as either WLW (whole lake water- all cyanobacteria), <5 µm (small/picocyanobacteria), or BFC (bloom-forming cyanobacteria). Using this data set, our research goal was to take the raw FASTQ reads and utilize QIIME2 as a tool to assign taxonomy, analyze diversity, and generate plots to aid in the analysis of this metabarcoding data.
+The dataset we used came from a [study](https://www.scirp.org/journal/paperinformation?paperid=125865) that sequenced eDNA for cyanobacteria from water samples in various locations around Martha’s Vineyard. In the data set, samples are classified as either WLW (whole lake water- all cyanobacteria), <5 µm (small/picocyanobacteria), or BFC (bloom-forming cyanobacteria). Using this data set, our research goal was to take the raw FASTQ reads and utilize QIIME2 as a tool to assign taxonomy, analyze diversity, and generate plots to aid in the analysis of this metabarcoding data.
 
 Final presentation **include link when done! 
 
@@ -21,10 +21,13 @@ A directory was made to store the files for this project. This was called “gen
 QIIME2 was activated on RON so that QIIME commands could be used. 
 
 #### tools import
-The FASTQ files provided in the cyano dataset were then imported into a single QIIME file with a .qza extension
+The FASTQ files provided in the cyano dataset were then imported into a single QIIME file with a .qza extension.
 
-#### cutadapt
+#### cutadapt trim-paired
 The primer and adapters of each pair of sequences were removed. Primer sequences specific to the cyano dataset were provided and specified in this command. 
+
+#### demux summarize
+Provided information summarizing demultiplexed sequence data; this included sequence counts (whole dataset and per sample), frequency histograms, and quality plots. 
 
 ### Denoising
 
@@ -32,10 +35,10 @@ The primer and adapters of each pair of sequences were removed. Primer sequences
 Sequences were denoised using QIIME to address potential sequencing errors. Trunclenf and trunclenr values specific to the cyano dataset were provided and used during this denoising step. 
 
 #### metadata tabulate
-Generated an output table of statistics regarding filtered and denoised reads. 
+Generated an output table of statistics regarding filtered and denoised reads; this included information such as the number of reads per sample, denoised sequences, merged sequences, and non-chimeric sequences. 
 
 #### feature-table tabulate-seqs
-A feature table was generated as a .qzv file to display these results regarding all features and their respective sequences/lengths.
+A feature table was generated as a .qzv file to display these results regarding all features and their respective sequences/lengths. Sequence length statistics (i.e. mean, range, standard deviation) were also generated. 
 
 ### Taxonomy Assignment and Classification
 
@@ -76,4 +79,9 @@ explain
 
 ## Findings  
 
+Figure 1:
+
+Figure 2:
+
+Figure 3: 
 

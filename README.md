@@ -24,7 +24,7 @@ QIIME2 was activated on RON so that QIIME commands could be used.
 The FASTQ files provided in the cyano dataset were then imported into a single QIIME file with a .qza extension
 
 #### cutadapt
-The primer and adapters of each pair of sequences were removed. Primers sequences specific to the cyano dataset were provided and specified in this command. 
+The primer and adapters of each pair of sequences were removed. Primer sequences specific to the cyano dataset were provided and specified in this command. 
 
 ### Denoising
 
@@ -42,6 +42,38 @@ A feature table was generated as a .qzv file to display these results regarding 
 #### feature-classifier classify-sklearn
 Used a provided classifier specific to the 16s coding region to assign taxonomic information (silva138_AB_V4_classifier.qza). 
 
-## Conclusions  
+#### feature-table summarize
+Converted the generated feature table from .qza to .qzv file format so that it could be visualized using QIIME2.
+
+#### feature-table filter-samples
+Generated a filtered feature table using the initial feature table and metadata as input data. 
+
+#### taxa barplot
+Generated barplot as a means of visualizing taxonomy. Verified that sample identity was 100% bacteria.
+
+### Diversity Analysis and Phylogenetic Placement of ASVs
+
+#### phylogeny align-to-tree-mafft-fasttree
+explain
+
+#### diversity core-metrics-phylogenetic
+explain 
+
+#### feature-table relative-frequency
+explain
+
+#### diversity pcoa-biplot
+explain
+
+#### emperor biplot
+explain
+
+#### diversity alpha-group-significance
+explain
+
+#### diversity beta-group-significance
+explain
+
+## Findings  
 
 

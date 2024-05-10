@@ -54,10 +54,15 @@ Generated a filtered feature table using the initial feature table and metadata 
 #### taxa barplot
 Used the filtered feature data to generate a barplot as a means of visualizing increasing levels of taxonomy and their distrubution among samples. 
 
-### Diversity Analysis and Phylogenetic Placement of ASVs
+### Phylogenetic Tree
 
 #### phylogeny align-to-tree-mafft-fasttree
 Generated a rooted phylogenetic tree as a .qza file from aligned sequences using MAFFT for alignment and FastTree for tree inference. 
+
+#### empress community-plot
+Added metadata and taxonomic data to tree. Output was viewable file (.qzv). (Fig. 3)
+
+### Diversity Analysis
 
 #### diversity core-metrics-phylogenetic
 Used the filtered feature data, rooted phylogenetic tree, and metadata to compute diversity metrics and generate diversity analyses. The Emperor tool was used to visualize data as PCoA plots (including Bray Curtis dissimilarity, Jaccard dissimilarity, and weighted/unweighted UniFrac). 
@@ -69,13 +74,10 @@ Generated a feature table containing relative abundance values based on calculat
 Generated a PCoA biplot of Unweighted UniFrac data (similarity metric). 
 
 #### emperor biplot
-Visualized the PCoA biplot using the Emperor visualization tool. (Fig. ??)
+Visualized the PCoA biplot using the Emperor visualization tool. (Fig. 4)
 
 #### diversity alpha-group-significance
-explain
-
-#### diversity beta-group-significance
-explain
+Generated box and whisker plots showing different variables in the study (sample, collection site, lake, etc.) plotted against Shannon entropy as a metric of diversity. (Fig. 5)
 
 ## Findings  
 
@@ -91,7 +93,9 @@ explain
 
 #### Figure 3: Phylogenetic Tree
 
+#### Figure 4: PcoA Biplot of Unweighted Unifrac Data
+
 <img width="1092" alt="Screenshot 2024-05-10 at 12 44 14 PM" src="https://github.com/mfoley02/gen_proj/assets/157628373/be5a2348-3919-4630-af0b-ba351d725c93">
 
-#### Figure 4: Alpha Diversity Boxplot
+#### Figure 5: Alpha Diversity Boxplot
 

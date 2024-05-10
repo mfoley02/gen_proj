@@ -52,7 +52,7 @@ Converted the generated feature table from .qza to .qzv file format so that it c
 Generated a filtered feature table using the initial feature table and metadata as input data. 
 
 #### taxa barplot
-Used the filtered feature data to generate a barplot as a means of visualizing taxonomy. Verified that sample identity was 100% bacteria.
+Used the filtered feature data to generate a barplot as a means of visualizing increasing levels of taxonomy and their distrubution among samples. 
 
 ### Diversity Analysis and Phylogenetic Placement of ASVs
 
@@ -78,10 +78,13 @@ explain
 explain
 
 ## Findings  
+<img width="1701" alt="Demux summarize quality score plot" src="https://github.com/mfoley02/gen_proj/assets/157628373/8b83bc9d-24a5-4b33-92c4-878296e7a6d6">
 
-Figure 1:
+#### Figure 1: Demultiplexed sequences summary 
 
-Figure 2:
+<img width="624" alt="Screenshot 2024-05-10 at 12 22 05 PM" src="https://github.com/mfoley02/gen_proj/assets/157628373/976a22a7-a9cd-464c-97d0-6fcc1b305086">
 
-Figure 3: 
+#### Figure 2: Phylogenetic Tree
+
+#### Figure 3: 
 

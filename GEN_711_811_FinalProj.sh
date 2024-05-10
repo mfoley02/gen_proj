@@ -168,3 +168,10 @@ qiime diversity beta-group-significance \
   --m-metadata-column Sample_Method \
   --p-pairwise \
   --o-visualization /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics/diversity_sig_plots/sample_method_unweighted_unifrac-beta-group-significance
+
+qiime diversity beta-group-significance \
+  --i-distance-matrix /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics/unweighted_unifrac_distance_matrix.qza \
+  --m-metadata-file /tmp/gen711_project_data/eDNA-fqs/cyano/cyano-metadata_salinity.tsv \
+  --m-metadata-column Lake \
+  --p-pairwise \
+  --o-visualization /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics/diversity_sig_plots/lake_unweighted_unifrac-beta-group-significance

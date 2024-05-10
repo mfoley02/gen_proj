@@ -122,6 +122,16 @@ qiime feature-table relative-frequency \
   --i-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics/rarefied_table.qza \
   --o-relative-frequency-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics/relative_rarefied_table
 
+-----
+qiime feature-table summarize \
+--i-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics/rarefied_table.qza \
+--o-visualization /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics/rarefied_table.qzv
+
+qiime feature-table summarize \
+--i-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics/relative_rarefied_table.qza \
+--o-visualization /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics/relative_rarefied_table.qzv
+-----
+
 qiime diversity pcoa-biplot \
   --i-features /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics/relative_rarefied_table.qza \
   --i-pcoa /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/tree/core-metrics/unweighted_unifrac_pcoa_results.qza \

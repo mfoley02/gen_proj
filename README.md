@@ -93,7 +93,10 @@ Generated box and whisker plots showing different variables in the study (sample
 
 #### Figure 3: Phylogenetic Tree
 
+<img width="1245" alt="Screenshot 2024-05-10 at 1 49 25 PM" src="https://github.com/mfoley02/gen_proj/assets/157628373/699b148f-49d8-4bb1-a9e6-b47bf1858424">
+
 #### Figure 4: PcoA Biplot of Unweighted Unifrac Data
+Coloring based on different sample sites. 
 
 <img width="1092" alt="Screenshot 2024-05-10 at 12 44 14 PM" src="https://github.com/mfoley02/gen_proj/assets/157628373/be5a2348-3919-4630-af0b-ba351d725c93">
 

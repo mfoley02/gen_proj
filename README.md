@@ -46,10 +46,10 @@ A feature table was generated as a .qzv file to display these results regarding 
 Used a provided classifier specific to the 16s coding region to assign taxonomic information (silva138_AB_V4_classifier.qza). 
 
 #### feature-table summarize
-Converted the generated feature table from .qza to .qzv file format so that it could be visualized using QIIME2. The output .qzv file displayed barplots summarizing data regarding the frequency per sample and frequency per feature. (Fig. 2)
+Converted the generated feature table from .qza to .qzv file format so that it could be visualized using QIIME2. The output .qzv file displayed barplots summarizing data regarding the frequency per sample and frequency per feature. 
 
 #### feature-table filter-samples
-Generated a filtered feature table using the initial feature table and metadata as input data. 
+Generated a filtered feature table using the initial feature table and metadata as input data. (Fig. 2)
 
 #### taxa barplot
 Used the filtered feature data to generate a barplot as a means of visualizing increasing levels of taxonomy and their distrubution among samples. 
@@ -83,13 +83,15 @@ explain
 
 #### Figure 1: Demultiplexed sequences summary 
 
+<img width="698" alt="Screenshot 2024-05-10 at 1 15 31 PM" src="https://github.com/mfoley02/gen_proj/assets/157628373/46c4a715-9ea3-402f-bb76-6c0455d760f8">
+
+#### Figure 2: Filtered feature table (frequency per sample)
 
 <img width="624" alt="Screenshot 2024-05-10 at 12 22 05 PM" src="https://github.com/mfoley02/gen_proj/assets/157628373/976a22a7-a9cd-464c-97d0-6fcc1b305086">
 
-#### Figure 2: Phylogenetic Tree
-
+#### Figure 3: Phylogenetic Tree
 
 <img width="1092" alt="Screenshot 2024-05-10 at 12 44 14 PM" src="https://github.com/mfoley02/gen_proj/assets/157628373/be5a2348-3919-4630-af0b-ba351d725c93">
 
-#### Figure 3: Alpha Diversity Boxplot
+#### Figure 4: Alpha Diversity Boxplot
 

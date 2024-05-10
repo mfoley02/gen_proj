@@ -78,13 +78,16 @@ explain
 explain
 
 ## Findings  
+
 <img width="1701" alt="Demux summarize quality score plot" src="https://github.com/mfoley02/gen_proj/assets/157628373/8b83bc9d-24a5-4b33-92c4-878296e7a6d6">
 
 #### Figure 1: Demultiplexed sequences summary 
 
+
 <img width="624" alt="Screenshot 2024-05-10 at 12 22 05 PM" src="https://github.com/mfoley02/gen_proj/assets/157628373/976a22a7-a9cd-464c-97d0-6fcc1b305086">
 
 #### Figure 2: Phylogenetic Tree
+
 
 <img width="1092" alt="Screenshot 2024-05-10 at 12 44 14 PM" src="https://github.com/mfoley02/gen_proj/assets/157628373/be5a2348-3919-4630-af0b-ba351d725c93">
 

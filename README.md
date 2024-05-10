@@ -86,5 +86,7 @@ explain
 
 #### Figure 2: Phylogenetic Tree
 
-#### Figure 3: 
+<img width="1092" alt="Screenshot 2024-05-10 at 12 44 14 PM" src="https://github.com/mfoley02/gen_proj/assets/157628373/be5a2348-3919-4630-af0b-ba351d725c93">
+
+#### Figure 3: Alpha Diversity Boxplot
 

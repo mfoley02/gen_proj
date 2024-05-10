@@ -73,6 +73,12 @@ qiime feature-table filter-samples \
   --m-metadata-file /tmp/gen711_project_data/eDNA-fqs/cyano/cyano-metadata_salinity.tsv \
   --o-filtered-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/feature_table_filtered.qza
 
+----
+  qiime feature-table summarize \
+--i-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/feature_table_filtered.qza \
+--o-visualization /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/feature_table_filtered.qzv
+----
+
 qiime taxa barplot \
      --i-table /home/users/mjd1127/gen_proj/cutadapt_output/denoise_output/feature_table_filtered.qza \
      --m-metadata-file /tmp/gen711_project_data/eDNA-fqs/cyano/cyano-metadata_salinity.tsv \

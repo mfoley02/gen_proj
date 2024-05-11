@@ -4,7 +4,7 @@
 ## Background
 The dataset we used came from a [study](https://www.scirp.org/journal/paperinformation?paperid=125865) that sequenced eDNA for cyanobacteria from water samples in various locations around Martha’s Vineyard. In the data set, samples are classified as either WLW (whole lake water- all cyanobacteria), <5 µm (small/picocyanobacteria), or BFC (bloom-forming cyanobacteria). Using this data set, our research goal was to take the raw FASTQ reads and utilize QIIME2 as a tool to assign taxonomy, analyze diversity, and generate plots to aid in the analysis of this metabarcoding data.
 
-Final presentation **include link when done! 
+[Final presentation](https://universitysystemnh-my.sharepoint.com/:p:/g/personal/mwf1022_usnh_edu/EcGi8z1OCzlBg5PwxgUWs3ABKbTQw1V44n5HX9-MSvKuEw?e=TBOw8A)
 
 [Code for the project](GEN_711_811_FinalProj.sh)
 

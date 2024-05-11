@@ -95,6 +95,7 @@ Generated boxplots showing the beta diversity of different sampling methods. (Fi
 <img width="624" alt="Screenshot 2024-05-10 at 12 22 05 PM" src="https://github.com/mfoley02/gen_proj/assets/157628373/976a22a7-a9cd-464c-97d0-6fcc1b305086">
 
 #### Figure 3: Phylogenetic Tree
+Phylogenetic tree sheared to just show cyanobacteria.  Inner bar graph desplays sample lake and outer bar graph displays sample method (picocyanobacteria, bloom forming, or whole water)
 
 <img width="1245" alt="Screenshot 2024-05-10 at 1 49 25 PM" src="https://github.com/mfoley02/gen_proj/assets/157628373/699b148f-49d8-4bb1-a9e6-b47bf1858424">
 
@@ -108,6 +109,7 @@ Coloring based on different sample sites.
 <img width="601" alt="Screenshot 2024-05-10 at 8 23 33 PM" src="https://github.com/mfoley02/gen_proj/assets/157628373/9cd3e8e2-c544-4549-b6c8-0daa96541bdf">
 
 #### Figure 6: Beta Diversity Boxplots
+Beta diversity shown between each sample method (picocyanobacteria, bloom forming, or whole water)
 
 ## Sources
 <img width="1485" alt="Screenshot 2024-05-10 at 9 00 09 PM" src="https://github.com/mfoley02/gen_proj/assets/157628373/41edcafe-2ad7-475d-99bd-81f7cc5b7571">

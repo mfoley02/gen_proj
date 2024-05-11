@@ -82,7 +82,8 @@ Generated box and whisker plots showing different variables in the study (sample
 #### diversity beta-group-significance
 Generated boxplots showing the beta diversity of different sampling methods. (Fig. 6)
 
-## Findings  
+## Findings
+All .qzv files produced during this project (except for two that exceeded 25mb) are located in a separate folder in this repository
 
 <img width="1701" alt="Demux summarize quality score plot" src="https://github.com/mfoley02/gen_proj/assets/157628373/8b83bc9d-24a5-4b33-92c4-878296e7a6d6">
 

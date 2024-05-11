@@ -92,25 +92,27 @@ This figure displays the base quality scores of the raw reads once the tails and
 <img width="698" alt="Screenshot 2024-05-10 at 1 15 31 PM" src="https://github.com/mfoley02/gen_proj/assets/157628373/46c4a715-9ea3-402f-bb76-6c0455d760f8">
 
 #### Figure 2: Filtered feature table (frequency per sample)
+This figure organizes data regarding unique genetic features are identified using the silva138_AB_V4 classifier.  The features occurring multiple times each sample in the majority of samples are likely highly conserved/repetitive regions.  Species level taxonomic assignment will be more likely to come from features occurring in lower sample numbers and in lower frequencies.
 
 <img width="624" alt="Screenshot 2024-05-10 at 12 22 05 PM" src="https://github.com/mfoley02/gen_proj/assets/157628373/976a22a7-a9cd-464c-97d0-6fcc1b305086">
 
 #### Figure 3: Phylogenetic Tree
-Phylogenetic tree sheared to just show cyanobacteria.  Inner bar graph desplays sample lake and outer bar graph displays sample method (picocyanobacteria, bloom forming, or whole water)
+Phylogenetic tree sheared to just show cyanobacteria.  Inner bar graph desplays sample lake and outer bar graph displays sample method (picocyanobacteria, bloom forming, or whole water).  Two observations were that Lower Mill pond was the site of most bloom forming Nostocales class cyanobacteria, as well as a large chunk of Synechococcales class picocyanobacteria.
 
 <img width="1245" alt="Screenshot 2024-05-10 at 1 49 25 PM" src="https://github.com/mfoley02/gen_proj/assets/157628373/699b148f-49d8-4bb1-a9e6-b47bf1858424">
 
 #### Figure 4: PcoA Biplot of Unweighted Unifrac Data
-Coloring based on different sample sites. 
+PCA uses unsupervised machine learning to cluster the read samples based on data from the feature table and phylogenetic tree.  Coloring of each point on the PCoA is based on different sample sites. Lagoon Pond had the most distinct cyanobacterial profile cluster (bottom right of the figure), while many of the other sample sites shared similar profiles (top and bottom left of the figure). 
 
 <img width="1092" alt="Screenshot 2024-05-10 at 12 44 14 PM" src="https://github.com/mfoley02/gen_proj/assets/157628373/be5a2348-3919-4630-af0b-ba351d725c93">
 
 #### Figure 5: Alpha Diversity Boxplot
+Alpha diversity measures the amont and range of cyanobacteria taxa found in the samples and is displayed as a box plot of each sample site. Seng Konkaton has the widest range of alpha diversity. James Pond and Tahoe Pier have the lowest.  The remaining don't have any usually significant difference in the number or range of organismal diversity.
 
 <img width="601" alt="Screenshot 2024-05-10 at 8 23 33 PM" src="https://github.com/mfoley02/gen_proj/assets/157628373/9cd3e8e2-c544-4549-b6c8-0daa96541bdf">
 
 #### Figure 6: Beta Diversity Boxplots
-Beta diversity shown between each sample method (picocyanobacteria, bloom forming, or whole water)
+Beta diversity measures the vartiation between the number of unique cyanobacteria taxa shown between each sample method (picocyanobacteria, bloom forming, or whole water).  There appears to be no significant difference in the beta diversity of the different sampling methods.  However, BFC appears to have a tighter distribution when compared to itself over other sampling methods.
 
 ## Conclusions
 QIIME2 is an extremely powerful tool to analyze eDNA sequencing data and makes it easier to understand the diversity of organisms in different environmental samples. QIIME 2 forums were helpful for troubleshooting commands and determining useful tools for our project. Most issues we ran into were  relatively simple to fix(bad file path, etc.). A few interesting takeaways were that Lower mill pond was the site of most bloom forming Nostocales class cyanobacteria, as well as a large chunk of Synechococcales class picocyanobacteria.  Additionally, PCA indicated that Lagoon Pond had the most distinct cyanobacterial profile cluster, while many of the other sample sites shared similar profiles.  Finally, alpha diversity box plots indicated that Seng Konkaton has the widest range of alpha diversity, while James Pond and Tahoe Pier have the lowest.

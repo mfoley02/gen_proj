@@ -79,6 +79,9 @@ Visualized the PCoA biplot using the Emperor visualization tool. (Fig. 4)
 #### diversity alpha-group-significance
 Generated box and whisker plots showing different variables in the study (sample, collection site, lake, etc.) plotted against Shannon entropy as a metric of diversity. (Fig. 5)
 
+#### diversity beta-group-significance
+Generated boxplots showing the beta diversity of different sampling methods. (Fig. 6)
+
 ## Findings  
 
 <img width="1701" alt="Demux summarize quality score plot" src="https://github.com/mfoley02/gen_proj/assets/157628373/8b83bc9d-24a5-4b33-92c4-878296e7a6d6">
@@ -101,4 +104,8 @@ Coloring based on different sample sites.
 <img width="1092" alt="Screenshot 2024-05-10 at 12 44 14 PM" src="https://github.com/mfoley02/gen_proj/assets/157628373/be5a2348-3919-4630-af0b-ba351d725c93">
 
 #### Figure 5: Alpha Diversity Boxplot
+
+<img width="601" alt="Screenshot 2024-05-10 at 8 23 33 PM" src="https://github.com/mfoley02/gen_proj/assets/157628373/9cd3e8e2-c544-4549-b6c8-0daa96541bdf">
+
+#### Figure 6: Beta Diversity Boxplots
 

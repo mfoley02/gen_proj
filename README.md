@@ -111,6 +111,9 @@ Coloring based on different sample sites.
 #### Figure 6: Beta Diversity Boxplots
 Beta diversity shown between each sample method (picocyanobacteria, bloom forming, or whole water)
 
+## Conclusions
+QIIME2 is an extremely powerful tool to analyze eDNA sequencing data and makes it easier to understand the diversity of organisms in different environmental samples. QIIME 2 forums were helpful for troubleshooting commands and determining useful tools for our project. Most issues we ran into were  relatively simple to fix(bad file path, etc.). A few interesting takeaways were that Lower mill pond was the site of most bloom forming Nostocales class cyanobacteria, as well as a large chunk of Synechococcales class picocyanobacteria.  Additionally, PCA indicated that Lagoon Pond had the most distinct cyanobacterial profile cluster, while many of the other sample sites shared similar profiles.  Finally, alpha diversity box plots indicated that Seng Konkaton has the widest range of alpha diversity, while James Pond and Tahoe Pier have the lowest.
+
 ## Sources
 <img width="1485" alt="Screenshot 2024-05-10 at 9 00 09 PM" src="https://github.com/mfoley02/gen_proj/assets/157628373/41edcafe-2ad7-475d-99bd-81f7cc5b7571">
 

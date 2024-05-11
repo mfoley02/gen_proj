@@ -11,6 +11,7 @@ The dataset we used came from a [study](https://www.scirp.org/journal/paperinfor
 Group Members: Amanda Bozzi, Mike Desisto, Mike Foley
 
 ## Methods 
+All code for this project was recorded in the .sh file in this repository
 
 ### Importing data
 

@@ -89,6 +89,8 @@ Generated boxplots showing the beta diversity of different sampling methods. (Fi
 #### Figure 1: Demultiplexed sequences summary 
 
 <img width="698" alt="Screenshot 2024-05-10 at 1 15 31 PM" src="https://github.com/mfoley02/gen_proj/assets/157628373/46c4a715-9ea3-402f-bb76-6c0455d760f8">
+This figure displays the base quality scores of the raw reads once the tails and primers/adapters have been trimmed.  Overall, the reads are of a high quality reads with 11 lower quality reads, particularly towards the end of the sequences.  This is likely due to the generally worse quality of the ends of reverse pair end reads.
+
 
 #### Figure 2: Filtered feature table (frequency per sample)
 
